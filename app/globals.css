@@ -1,0 +1,77 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme {
+  --color-vanta: #000000;
+  --color-amethyst: #534AB7;
+  --color-violet: #8B5CF6;
+  --color-magenta: #D946EF;
+  --color-crimson: #EF4444;
+  --color-glass: rgba(255, 255, 255, 0.01);
+  --color-glass-border: rgba(255, 255, 255, 0.1);
+}
+
+@layer utilities {
+  .glass-panel {
+    @apply bg-glass border border-glass-border backdrop-blur-[40px];
+  }
+  
+  .liquid-glass {
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  }
+
+  .text-glow {
+    text-shadow: 0 0 15px rgba(217, 70, 239, 0.6);
+  }
+
+  .inner-glow-amethyst {
+    box-shadow: inset 0 0 20px rgba(83, 74, 183, 0.5);
+  }
+
+  .digital-flicker {
+    animation: flicker 4s infinite;
+  }
+
+  .volumetric-rays {
+    background: radial-gradient(ellipse at top, rgba(139, 92, 246, 0.15) 0%, transparent 60%);
+    mix-blend-mode: screen;
+  }
+  
+  .atmospheric-fog {
+    background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.8) 100%);
+  }
+}
+
+@keyframes flicker {
+  0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
+    opacity: 1;
+  }
+  20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
+    opacity: 0.8;
+  }
+}
+
+body {
+  background-color: var(--color-vanta);
+  color: white;
+  overflow-x: hidden;
+  cursor: none; /* Hide default cursor for custom lens cursor */
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-vanta);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-amethyst);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-magenta);
+}
