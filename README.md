@@ -5,7 +5,7 @@
 [![Tech Stack](https://img.shields.io/badge/Stack-Next.js_15_|_Three.js_|_Claude_3.5-000000?style=for-the-badge)](https://decidr.ai)
 
 ## 🔭 Overview
-**Decidr** (Project AIML5) is a generative intelligence platform designed to navigate the "Fundamental Mismatch" between deterministic software requirements and non-deterministic AI behavior. 
+**Decidr** is a generative intelligence platform designed to navigate the "Fundamental Mismatch" between deterministic software requirements and non-deterministic AI behavior. 
 
 Unlike traditional PRD tools, Decidr utilizes a **3D Spatial Reasoning Engine** and **Chain-of-Thought (CoT) logic** to analyze product goals, detect constraint contradictions, and generate explainable architectural paths.
 
